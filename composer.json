@@ -14,16 +14,15 @@
     ],
     "require": {
         "php": ">=5.4",
-        "j7mbo/twitter-api-php": "1.*",
         "brs-software/stdlib": "1.*",
-        "symfony/process": "2.*"
+        "j7mbo/twitter-api-php": "1.*",
     },
     "require-dev": {
         "phpunit/PHPUnit": "3.7.*"
     },
     "autoload": {
         "psr-4": {
-            "Brs\\SocialMediaApi\\": "/",
+            "Brs\\SocialMediaAPI\\": "/",
             "Brs\\SocialMediaApiTest\\": "Tests/"
         }
     },
