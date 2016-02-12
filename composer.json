@@ -10,12 +10,12 @@
     ],
     "license": "The MIT License",
     "keywords": [
-        "brs", "html", "pdf", "wkhtmltopdf"
+        "brs", "social media"
     ],
     "require": {
         "php": ">=5.4",
         "brs-software/stdlib": "1.*",
-        "j7mbo/twitter-api-php": "1.*",
+        "j7mbo/twitter-api-php": "1.*"
     },
     "require-dev": {
         "phpunit/PHPUnit": "3.7.*"
