@@ -26,7 +26,7 @@
     "autoload": {
         "psr-4": {
             "Brs\\SocialMediaAPI\\": "/",
-            "Brs\\SocialMediaApiTest\\": "Tests/"
+            "Brs\\SocialMediaAPITest\\": "Tests/"
         }
     },
     "minimum-stability": "dev"
