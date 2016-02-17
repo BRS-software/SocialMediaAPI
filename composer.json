@@ -25,11 +25,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Brs\\SocialMediaAPI\\": "",
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        }
+            "Brs\\SocialMediaAPI\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
     },
     "minimum-stability": "dev"
 }
