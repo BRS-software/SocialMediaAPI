@@ -35,6 +35,7 @@ class Facebook extends AbstractAPI
         $fromTs = strtotime($fromDate);
         $pack = 1;
         $untilTs = time();
+        $result = [];
 
         while (true) {
             $this->printLog('Getting data from facebook API, pack %d: ', $pack++);
