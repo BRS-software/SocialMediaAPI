@@ -10,7 +10,7 @@
 namespace Brs\SocialMediaAPI\Model;
 
 /**
- * @Table(name="logs")
+ * @Table(name="social_media_api_logs")
  * @Entity(repositoryClass="Brs\SocialMediaAPI\Model\LogRepository")
  * @author Tomasz Borys (tobo) <t.borys@brs-software.pl>
  */
@@ -38,7 +38,7 @@ class Log
     protected $date;
 
     /** @Column(type="string") **/
-    protected $postId;
+    protected $externalId;
 
     /** @Column(type="string") **/
     protected $localId;
@@ -87,15 +87,15 @@ class Log
         return $this->importName;
     }
 
-    public function setPostId($postId)
+    public function setExternalId($externalId)
     {
-        $this->postId = $postId;
+        $this->externalId = $externalId;
         return $this;
     }
 
-    public function getPostId()
+    public function getExternalId()
     {
-        return $this->postId;
+        return $this->externalId;
     }
 
     public function setLocalId($localId)

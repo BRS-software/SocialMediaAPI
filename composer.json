@@ -10,13 +10,13 @@
     ],
     "license": "The MIT License",
     "keywords": [
-        "brs", "social media"
+        "brs", "social media", "api"
     ],
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.5.9",
         "brs-software/stdlib": "1.*",
-        "j7mbo/twitter-api-php": "1.*",
-        "facebook/php-sdk-v4" : "~5.0",
+        "j7mbo/twitter-api-php": "1.0.5",
+        "facebook/php-sdk-v4" : "5.0",
         "doctrine/orm": "2.5.*",
         "symfony/options-resolver": "3.0.*"
     },

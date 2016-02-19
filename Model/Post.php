@@ -16,8 +16,12 @@ class Post
 {
     protected $id;
     protected $title;
-    protected $text;
+    protected $content;
+    protected $date;
+    protected $userName;
     protected $rawData;
+    protected $postUrl;
+    protected $imgUrl;
 
     public function setId($id)
     {
@@ -41,15 +45,37 @@ class Post
         return $this->title;
     }
 
-    public function setText($text)
+    public function setContent($content)
     {
-        $this->text = $text;
+        $this->content = $content;
         return $this;
     }
 
-    public function getText()
+    public function getContent()
     {
-        return $this->text;
+        return $this->content;
+    }
+
+    public function setDate($date)
+    {
+        $this->date = date('Y-m-d H:i:s', strtotime($date));
+        return $this;
+    }
+
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
+        return $this;
+    }
+
+    public function getUserName()
+    {
+        return $this->userName;
     }
 
     public function setRawData(array $rawData)
@@ -61,5 +87,27 @@ class Post
     public function getRawData()
     {
         return $this->rawData;
+    }
+
+    public function setPostUrl($postUrl)
+    {
+        $this->postUrl = $postUrl;
+        return $this;
+    }
+
+    public function getPostUrl()
+    {
+        return $this->postUrl;
+    }
+
+    public function setImgUrl($imgUrl)
+    {
+        $this->imgUrl = $imgUrl;
+        return $this;
+    }
+
+    public function getImgUrl()
+    {
+        return $this->imgUrl;
     }
 }

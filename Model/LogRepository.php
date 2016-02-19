@@ -17,18 +17,18 @@ use Doctrine\ORM\EntityRepository;
  */
 class LogRepository extends EntityRepository
 {
-    public function wasImportedWithSuccess($apiName, $importName, $postId)
+    public function wasImportedWithSuccess($apiName, $importName, $externalId)
     {
         $result = $this->findOneBy([
             'status' => Log::STATUS_SUCCESS,
             'apiName' => $apiName,
             'importName' => $importName,
-            'postId' => $postId,
+            'externalId' => $externalId,
         ]);
         return null !== $result ? $result : false;
     }
 
-    public function addSuccessImport($apiName, $importName, $postId, $localId)
+    public function addSuccessImport($apiName, $importName, $externalId, $localId)
     {
         // $check = $this->findOneBy([
         //     'status' => Log::STATUS_SUCCESS,
@@ -43,7 +43,7 @@ class LogRepository extends EntityRepository
             ->setStatus(Log::STATUS_SUCCESS)
             ->setApiName($apiName)
             ->setImportName($importName)
-            ->setPostId($postId)
+            ->setExternalId($externalId)
             ->setLocalId($localId)
         ;
         $this->_em->persist($log);
@@ -51,7 +51,7 @@ class LogRepository extends EntityRepository
         return $log;
     }
 
-    public function addFailImport($apiName, $importName, $postId, $errorMessage)
+    public function addFailImport($apiName, $importName, $externalId, $errorMessage)
     {
         $log = new Log();
         $log
@@ -59,7 +59,7 @@ class LogRepository extends EntityRepository
             ->setErrorMessage($errorMessage)
             ->setApiName($apiName)
             ->setImportName($importName)
-            ->setPostId($postId)
+            ->setExternalId($externalId)
         ;
         $this->_em->persist($log);
         $this->_em->flush();

@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Brs\SocialMediaAPI;
+namespace Brs\SocialMediaAPI\API;
 
 use Closure;
 
