@@ -67,7 +67,7 @@ class Facebook extends AbstractAPI
             ->setContent($rawData->getField('message'))
             ->setDate($rawData->getField('created_time')->format('Y-m-d H:i:s'))
             ->setUserName($rawData->getField('admin_creator')->getField('name'))
-            ->setPostUrl('https://www.facebook.com/VivitarOfficial/posts/' . explode('_', $rawData->getField('id'))[1])
+            ->setPostUrl(sprintf('https://www.facebook.com/%s/posts/%s', $this->clientOptions['profile_id'], explode('_', $rawData->getField('id'))[1]))
             //->setPostUrl($rawData->getField('link'))
             ->setImgUrl($rawData->getField('full_picture'))
         ;
