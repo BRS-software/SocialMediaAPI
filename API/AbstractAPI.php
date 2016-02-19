@@ -81,20 +81,6 @@ abstract class AbstractAPI implements APIInterface
         ;
     }
 
-    public function FunctionName(OptionsResolver $resolver)
-    {
-        parent::configureOptions($resolver);
-        $clientResolver = new OptionsResolver();
-        $clientResolver
-            ->setRequired(['app_id', 'app_secret', 'access_token', 'profile_id'])
-            ->setAllowedTypes('app_id', 'integer')
-            ->setAllowedTypes('app_secret', 'string')
-            ->setAllowedTypes('access_token', 'string')
-            ->setAllowedTypes('profile_id', ['string', 'integer'])
-        ;
-
-    }
-
     public function getClient()
     {
         if (null === $this->client) {
