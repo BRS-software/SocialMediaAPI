@@ -62,6 +62,7 @@ class Youtube extends AbstractAPI
         $post
             ->setRawData($rawData)
             ->setId($rawData['id'])
+            ->setTitle($rawData['group']['title'])
             ->setContent($rawData['group']['description'])
             ->setDate(date('Y-m-d H:i:s', strtotime($rawData['published'])))
             ->setUserName($rawData['author']['name'])
