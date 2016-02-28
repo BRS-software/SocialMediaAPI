@@ -18,7 +18,8 @@
         "j7mbo/twitter-api-php": "1.0.5",
         "facebook/php-sdk-v4" : "5.0",
         "doctrine/orm": "2.5.*",
-        "symfony/options-resolver": "3.0.*"
+        "symfony/options-resolver": "3.0.*",
+        "php-instagram-api/php-instagram-api": "dev-master"
     },
     "require-dev": {
         "phpunit/PHPUnit": "3.7.*"
