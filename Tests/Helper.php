@@ -45,4 +45,20 @@ class Helper
             'profile_id' => $GLOBALS['FACEBOOK_PROFILE_ID'],
         ];
     }
+
+    public function getInstagramClientOptions()
+    {
+        Assert::has($GLOBALS, [
+            'INSTAGRAM_CLIENT_ID',
+            'INSTAGRAM_CLIENT_SECRET',
+            'INSTAGRAM_USER_ID',
+            'INSTAGRAM_ACCESS_TOKEN',
+        ]);
+        return [
+            'client_id' => $GLOBALS['INSTAGRAM_CLIENT_ID'],
+            'client_secret' => $GLOBALS['INSTAGRAM_CLIENT_SECRET'],
+            'user_id' => $GLOBALS['INSTAGRAM_USER_ID'],
+            'access_token' => $GLOBALS['INSTAGRAM_ACCESS_TOKEN'],
+        ];
+    }
 }
