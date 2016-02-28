@@ -19,7 +19,7 @@
         "facebook/php-sdk-v4" : "5.0",
         "doctrine/orm": "2.5.*",
         "symfony/options-resolver": "3.0.*",
-        "php-instagram-api/php-instagram-api": "dev-master"
+        "cosenary/instagram": "2.3.*"
     },
     "require-dev": {
         "phpunit/PHPUnit": "3.7.*"
