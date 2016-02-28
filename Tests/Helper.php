@@ -61,4 +61,14 @@ class Helper
             'access_token' => $GLOBALS['INSTAGRAM_ACCESS_TOKEN'],
         ];
     }
+
+    public function getYoutubeClientOptions()
+    {
+        Assert::has($GLOBALS, [
+            'YOUTUBE_USER_NAME'
+        ]);
+        return [
+            'user_name' => $GLOBALS['YOUTUBE_USER_NAME'],
+        ];
+    }
 }
