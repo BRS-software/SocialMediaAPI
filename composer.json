@@ -18,8 +18,7 @@
         "j7mbo/twitter-api-php": "1.0.5",
         "facebook/php-sdk-v4" : "5.0",
         "doctrine/orm": "2.5.*",
-        "symfony/options-resolver": "3.0.*",
-        "cosenary/instagram": "2.3.*"
+        "symfony/options-resolver": "3.0.*"
     },
     "require-dev": {
         "phpunit/PHPUnit": "3.7.*"
